@@ -19,6 +19,16 @@ class TaskRepository extends ServiceEntityRepository
         parent::__construct($registry, Task::class);
     }
 
+    public function findExpiredTasksSince(\DateTime $dateTime, $maxResults = 100): array
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.expires <= :val')
+            ->setParameter('val', $dateTime)
+            ->setMaxResults($maxResults)
+            ->getQuery()
+            ->getResult();
+    }
+
     // /**
     //  * @return Task[] Returns an array of Task objects
     //  */

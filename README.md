@@ -45,7 +45,7 @@ If you'd like to play along using Blackfire, visit Blackfire and create an accou
 If you'd like to play along using Tideways, visit Tideways and create an account. Then, create an organization with a 7-day trial with full functionality.
 
 
-## Manual Instrumentation
+## Manual Instrumentation Snippets
 
 ### Blackfire
 

@@ -56,4 +56,11 @@ class Task
 
         return $this;
     }
+
+    public function reset(\DateTimeInterface $expires): self
+    {
+        $this->expires = $expires;
+
+        return $this;
+    }
 }
